@@ -1,4 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="0" fill="#0a0a0a"/>
-  <text x="16" y="24" font-family="system-ui" font-weight="900" font-size="20" fill="#4488ff" text-anchor="middle">S</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276 196">
+  <image href="/logo.png" width="276" height="196"/>
 </svg>

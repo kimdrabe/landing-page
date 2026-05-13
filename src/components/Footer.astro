@@ -15,11 +15,10 @@ const { footer } = content;
     flex-wrap: wrap;
     gap: var(--space-md);
   }
-  .footer-logo {
-    font-family: var(--font-display);
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+  .footer-logo-img {
+    height: 24px;
+    width: auto;
+    display: block;
   }
   .footer-copy {
     font-size: 0.75rem;
@@ -65,7 +64,7 @@ const { footer } = content;
 <footer class="footer" id="footer">
   <div class="container">
     <div class="footer-inner">
-      <span class="footer-logo">{footer.logo}</span>
+      <img src="/logo.png" alt={footer.logo} class="footer-logo-img" />
       <span class="footer-copy">{footer.copyright}</span>
       <div class="footer-links">
         {
