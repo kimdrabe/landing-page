@@ -4,7 +4,7 @@
     "description": "Wir designen für die Pleps."
   },
   "header": {
-    "logoImage": "",
+    "logoImage": "/media/Bildschirmfoto_2026-05-13_um_22.36.11.png",
     "logo": "STUDIO",
     "links": [
       {
@@ -184,7 +184,6 @@
     ]
   },
   "footer": {
-    "logoImage": "",
     "logo": "STUDIO",
     "copyright": "© 2026 — Alle Rechte vorbehalten",
     "links": [
