@@ -1,6 +1,7 @@
 ---
 import content from '../data/content.json';
 const { footer } = content;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <style>
@@ -71,7 +72,7 @@ const { footer } = content;
   <div class="container">
     <div class="footer-inner">
       {footer.logoImage ? (
-        <img src={footer.logoImage} alt={footer.logo} class="footer-logo-img" />
+        <img src={base + footer.logoImage} alt={footer.logo} class="footer-logo-img" />
       ) : (
         <span class="footer-logo-text">{footer.logo}</span>
       )}

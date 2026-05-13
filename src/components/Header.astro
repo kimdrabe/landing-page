@@ -1,6 +1,7 @@
 ---
 import content from '../data/content.json';
 const { header } = content;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <style>
@@ -63,7 +64,7 @@ const { header } = content;
 <header class="header">
     <a href="#" class="logo">
       {header.logoImage ? (
-        <img src={header.logoImage} alt={header.logo} class="logo-img" />
+        <img src={base + header.logoImage} alt={header.logo} class="logo-img" />
       ) : (
         <span class="logo-text">{header.logo}</span>
       )}
