@@ -1,0 +1,61 @@
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    mix-blend-mode: difference;
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text);
+  }
+  .nav {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+  }
+  .nav a {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-text);
+    transition: opacity 0.3s ease;
+    position: relative;
+  }
+  .nav a:hover {
+    opacity: 0.6;
+  }
+  .nav-cta {
+    border: 1px solid var(--color-text);
+    padding: 0.5rem 1.25rem;
+    transition: all 0.3s ease;
+  }
+  .nav-cta:hover {
+    background: var(--color-text);
+    color: var(--color-bg) !important;
+    opacity: 1 !important;
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+  }
+</style>
+
+<header class="header">
+  <a href="#" class="logo">STUDIO</a>
+  <nav class="nav">
+    <a href="#work" class="nav-links">Work</a>
+    <a href="#services" class="nav-links">Services</a>
+    <a href="#team" class="nav-links">Team</a>
+    <a href="#contact" class="nav-cta">Start a Project</a>
+  </nav>
+</header>

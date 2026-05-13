@@ -1,0 +1,108 @@
+<style>
+  .philosophy {
+    background: var(--color-bg-alt);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+  .philosophy-list {
+    counter-reset: manifesto;
+  }
+  .philosophy-item {
+    counter-increment: manifesto;
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+  .philosophy-item.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .philosophy-item:nth-child(1).in-view { transition-delay: 0.1s; }
+  .philosophy-item:nth-child(2).in-view { transition-delay: 0.2s; }
+  .philosophy-item:nth-child(3).in-view { transition-delay: 0.3s; }
+  .philosophy-item:nth-child(4).in-view { transition-delay: 0.4s; }
+  .philosophy-item:last-child { border-bottom: none; }
+  .philosophy-num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--color-accent);
+    flex-shrink: 0;
+    min-width: 2ch;
+  }
+  .philosophy-text {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .philosophy-body {
+    position: sticky;
+    top: 6rem;
+  }
+  .philosophy-body p {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-top: var(--space-md);
+  }
+  .philosophy-body .accent-border {
+    width: 60px;
+    height: 4px;
+    background: var(--color-accent);
+    margin-top: var(--space-sm);
+  }
+  @media (max-width: 768px) {
+    .philosophy-grid {
+      grid-template-columns: 1fr;
+    }
+    .philosophy-body {
+      position: static;
+    }
+  }
+</style>
+
+<section class="section philosophy" id="philosophy">
+  <div class="container">
+    <div class="philosophy-grid">
+      <div class="philosophy-list">
+        <div class="philosophy-item">
+          <span class="philosophy-num">01</span>
+          <span class="philosophy-text">Design is not decoration — it is communication.</span>
+        </div>
+        <div class="philosophy-item">
+          <span class="philosophy-num">02</span>
+          <span class="philosophy-text">If it looks like everyone else, it sounds like no one.</span>
+        </div>
+        <div class="philosophy-item">
+          <span class="philosophy-num">03</span>
+          <span class="philosophy-text">Every pixel must earn its place.</span>
+        </div>
+        <div class="philosophy-item">
+          <span class="philosophy-num">04</span>
+          <span class="philosophy-text">Speed is a feature. Accessibility is non-negotiable.</span>
+        </div>
+      </div>
+      <div class="philosophy-body">
+        <span class="section-label">Our Manifesto</span>
+        <h2 class="section-title">Built on<br>Conviction</h2>
+        <div class="accent-border"></div>
+        <p>
+          We reject cookie-cutter templates and safe design. Every project starts with a point of view — a bold creative direction that becomes the foundation for everything else. Our process is rigorous, our standards are high, and we only take work we believe in.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

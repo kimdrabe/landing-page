@@ -1,0 +1,130 @@
+<style>
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--color-border);
+    margin-top: var(--space-lg);
+  }
+  .work-card {
+    background: var(--color-bg);
+    padding: var(--space-lg) var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s ease;
+    cursor: pointer;
+  }
+  .work-card:hover {
+    background: var(--color-surface);
+  }
+  .work-card:hover .work-arrow {
+    transform: translate(4px, -4px);
+    opacity: 1;
+  }
+  .work-card-tag {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+  .work-card-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    flex: 1;
+  }
+  .work-card-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+  .work-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+  }
+  .work-card-type {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .work-arrow {
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    transition: all 0.3s ease;
+    opacity: 0.5;
+  }
+  .work-cta-wrap {
+    text-align: center;
+    margin-top: var(--space-lg);
+  }
+  .work-cta {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+    padding: 1rem 2.5rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  .work-cta:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+  }
+  @media (max-width: 768px) {
+    .work-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<section class="section" id="work">
+  <div class="container">
+    <span class="section-label reveal">Selected Projects</span>
+    <h2 class="section-title reveal reveal-delay-1">Work That<br>Speaks</h2>
+    <div class="work-grid">
+      <div class="work-card reveal reveal-delay-1">
+        <span class="work-card-tag">Featured</span>
+        <h3 class="work-card-title">NOVA<br>Platform</h3>
+        <p class="work-card-desc">A design system and product platform for a climate-tech startup, built for scale and speed.</p>
+        <div class="work-card-footer">
+          <span class="work-card-type">Web App</span>
+          <span class="work-arrow">↗</span>
+        </div>
+      </div>
+      <div class="work-card reveal reveal-delay-2">
+        <span class="work-card-tag">Featured</span>
+        <h3 class="work-card-title">ATELIER<br>Noir</h3>
+        <p class="work-card-desc">E-commerce experience for a luxury fashion brand. Brutalist meets refined elegance.</p>
+        <div class="work-card-footer">
+          <span class="work-card-type">E-Commerce</span>
+          <span class="work-arrow">↗</span>
+        </div>
+      </div>
+      <div class="work-card reveal reveal-delay-3">
+        <span class="work-card-tag">Featured</span>
+        <h3 class="work-card-title">RADIO<br>FREE</h3>
+        <p class="work-card-desc">A streaming platform for independent radio. Noise texture meets neon aesthetics.</p>
+        <div class="work-card-footer">
+          <span class="work-card-type">Web App</span>
+          <span class="work-arrow">↗</span>
+        </div>
+      </div>
+    </div>
+    <div class="work-cta-wrap reveal">
+      <a href="#" class="work-cta">View All Projects →</a>
+    </div>
+  </div>
+</section>

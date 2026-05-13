@@ -1,0 +1,126 @@
+<style>
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+  .team-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .team-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: var(--color-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  .team-card:hover .team-image {
+    background: var(--color-accent-dim);
+  }
+  .team-image-placeholder {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: var(--color-border);
+    transition: color 0.4s ease;
+  }
+  .team-card:hover .team-image-placeholder {
+    color: var(--color-accent);
+  }
+  .team-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, var(--color-bg) 100%);
+  }
+  .team-info {
+    padding: var(--space-sm) 0;
+  }
+  .team-name {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .team-role {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+  .team-social {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-xs);
+  }
+  .team-social a {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    transition: color 0.3s ease;
+  }
+  .team-social a:hover {
+    color: var(--color-accent);
+  }
+  @media (max-width: 768px) {
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<section class="section" id="team">
+  <div class="container">
+    <span class="section-label reveal">Who We Are</span>
+    <h2 class="section-title reveal reveal-delay-1">The Team</h2>
+    <div class="team-grid">
+      <div class="team-card reveal reveal-delay-1">
+        <div class="team-image">
+          <span class="team-image-placeholder">AK</span>
+          <div class="team-image-overlay"></div>
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Alex Kraft</h3>
+          <p class="team-role">Founder & Creative Director</p>
+          <div class="team-social">
+            <a href="#">Twitter</a>
+            <a href="#">Dribbble</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal-delay-2">
+        <div class="team-image">
+          <span class="team-image-placeholder">SM</span>
+          <div class="team-image-overlay"></div>
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Sasha Miles</h3>
+          <p class="team-role">Lead Developer</p>
+          <div class="team-social">
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal-delay-3">
+        <div class="team-image">
+          <span class="team-image-placeholder">LJ</span>
+          <div class="team-image-overlay"></div>
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Luna Jimenez</h3>
+          <p class="team-role">Design Lead</p>
+          <div class="team-social">
+            <a href="#">Twitter</a>
+            <a href="#">Behance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
