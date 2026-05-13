@@ -17,6 +17,10 @@
       {
         "label": "Team",
         "href": "#team"
+      },
+      {
+        "label": "Info",
+        "href": "#Info"
       }
     ],
     "cta": "Projekt starten"
