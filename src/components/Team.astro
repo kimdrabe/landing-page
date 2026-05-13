@@ -1,3 +1,8 @@
+---
+import content from '../data/content.json';
+const { team } = content;
+---
+
 <style>
   .team-grid {
     display: grid;
@@ -76,51 +81,30 @@
 
 <section class="section" id="team">
   <div class="container">
-    <span class="section-label reveal">Who We Are</span>
-    <h2 class="section-title reveal reveal-delay-1">The Team</h2>
+    <span class="section-label reveal">{team.label}</span>
+    <h2 class="section-title reveal reveal-delay-1">{team.title}</h2>
     <div class="team-grid">
-      <div class="team-card reveal reveal-delay-1">
-        <div class="team-image">
-          <span class="team-image-placeholder">AK</span>
-          <div class="team-image-overlay"></div>
-        </div>
-        <div class="team-info">
-          <h3 class="team-name">Alex Kraft</h3>
-          <p class="team-role">Founder & Creative Director</p>
-          <div class="team-social">
-            <a href="#">Twitter</a>
-            <a href="#">Dribbble</a>
+      {
+        team.members.map((member, i) => (
+          <div class={`team-card reveal reveal-delay-${i + 1}`}>
+            <div class="team-image">
+              <span class="team-image-placeholder">{member.initials}</span>
+              <div class="team-image-overlay"></div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">{member.name}</h3>
+              <p class="team-role">{member.role}</p>
+              <div class="team-social">
+                {
+                  member.socials.map((social) => (
+                    <a href={social.url}>{social.label}</a>
+                  ))
+                }
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="team-card reveal reveal-delay-2">
-        <div class="team-image">
-          <span class="team-image-placeholder">SM</span>
-          <div class="team-image-overlay"></div>
-        </div>
-        <div class="team-info">
-          <h3 class="team-name">Sasha Miles</h3>
-          <p class="team-role">Lead Developer</p>
-          <div class="team-social">
-            <a href="#">GitHub</a>
-            <a href="#">Twitter</a>
-          </div>
-        </div>
-      </div>
-      <div class="team-card reveal reveal-delay-3">
-        <div class="team-image">
-          <span class="team-image-placeholder">LJ</span>
-          <div class="team-image-overlay"></div>
-        </div>
-        <div class="team-info">
-          <h3 class="team-name">Luna Jimenez</h3>
-          <p class="team-role">Design Lead</p>
-          <div class="team-social">
-            <a href="#">Twitter</a>
-            <a href="#">Behance</a>
-          </div>
-        </div>
-      </div>
+        ))
+      }
     </div>
   </div>
 </section>

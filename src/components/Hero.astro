@@ -1,3 +1,8 @@
+---
+import content from '../data/content.json';
+const { hero } = content;
+---
+
 <style>
   .hero {
     min-height: 100vh;
@@ -176,36 +181,26 @@
 
 <section class="hero" id="hero">
   <div class="hero-left">
-    <span class="hero-label">Est. 2020</span>
+    <span class="hero-label">{hero.label}</span>
     <h1 class="hero-title">
-      We Design<br>
-      <span class="accent">For the Bold</span>
+      {hero.title}<br>
+      <span class="accent">{hero.titleAccent}</span>
     </h1>
-    <p class="hero-sub">
-      A brutalist web design studio crafting digital experiences that refuse to blend in. We work with founders and brands who have something to say.
-    </p>
-    <a href="#contact" class="hero-cta">Start a Project</a>
+    <p class="hero-sub">{hero.subtitle}</p>
+    <a href="#contact" class="hero-cta">{hero.cta}</a>
   </div>
   <div class="hero-right">
     <div class="hero-diagonal"></div>
     <div class="hero-diagonal-accent"></div>
     <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-number">8+</span>
-        <span class="hero-stat-label">Years Experience</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-number">120+</span>
-        <span class="hero-stat-label">Projects Delivered</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-number">40+</span>
-        <span class="hero-stat-label">Global Clients</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-number">3x</span>
-        <span class="hero-stat-label">Awwwards Nom.</span>
-      </div>
+      {
+        hero.stats.map((stat) => (
+          <div class="hero-stat">
+            <span class="hero-stat-number">{stat.number}</span>
+            <span class="hero-stat-label">{stat.label}</span>
+          </div>
+        ))
+      }
     </div>
   </div>
   <div class="hero-scroll">

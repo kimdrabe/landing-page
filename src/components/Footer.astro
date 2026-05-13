@@ -1,3 +1,8 @@
+---
+import content from '../data/content.json';
+const { footer } = content;
+---
+
 <style>
   .footer {
     padding: var(--space-lg) 0;
@@ -60,11 +65,14 @@
 <footer class="footer" id="footer">
   <div class="container">
     <div class="footer-inner">
-      <span class="footer-logo">STUDIO</span>
-      <span class="footer-copy">© 2026 — All rights reserved</span>
+      <span class="footer-logo">{footer.logo}</span>
+      <span class="footer-copy">{footer.copyright}</span>
       <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Legal</a>
+        {
+          footer.links.map((link) => (
+            <a href={link.url}>{link.label}</a>
+          ))
+        }
       </div>
     </div>
   </div>

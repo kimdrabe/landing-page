@@ -1,3 +1,8 @@
+---
+import content from '../data/content.json';
+const { services } = content;
+---
+
 <style>
   .services {
     background: var(--color-bg-alt);
@@ -82,27 +87,19 @@
 
 <section class="section services" id="services">
   <div class="container">
-    <span class="section-label reveal">What We Do</span>
-    <h2 class="section-title reveal reveal-delay-1">Services</h2>
+    <span class="section-label reveal">{services.label}</span>
+    <h2 class="section-title reveal reveal-delay-1">{services.title}</h2>
     <div class="services-grid">
-      <div class="service-card reveal reveal-delay-1">
-        <span class="service-num">01</span>
-        <h3 class="service-title">Web Design</h3>
-        <p class="service-desc">Custom websites and landing pages that make an immediate impression. No templates, no compromises.</p>
-        <span class="service-arrow">↗</span>
-      </div>
-      <div class="service-card reveal reveal-delay-2">
-        <span class="service-num">02</span>
-        <h3 class="service-title">Web Development</h3>
-        <p class="service-desc">Fast, accessible, production-grade code. Astro, React, or vanilla — we use the right tool for the job.</p>
-        <span class="service-arrow">↗</span>
-      </div>
-      <div class="service-card reveal reveal-delay-3">
-        <span class="service-num">03</span>
-        <h3 class="service-title">Design Systems</h3>
-        <p class="service-desc">Scalable, cohesive design systems that keep your brand consistent across every touchpoint.</p>
-        <span class="service-arrow">↗</span>
-      </div>
+      {
+        services.items.map((item, i) => (
+          <div class={`service-card reveal reveal-delay-${i + 1}`}>
+            <span class="service-num">{item.number}</span>
+            <h3 class="service-title">{item.title}</h3>
+            <p class="service-desc">{item.description}</p>
+            <span class="service-arrow">↗</span>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>

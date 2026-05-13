@@ -1,3 +1,8 @@
+---
+import content from '../data/content.json';
+const { work } = content;
+---
+
 <style>
   .work-grid {
     display: grid;
@@ -92,39 +97,25 @@
 
 <section class="section" id="work">
   <div class="container">
-    <span class="section-label reveal">Selected Projects</span>
-    <h2 class="section-title reveal reveal-delay-1">Work That<br>Speaks</h2>
+    <span class="section-label reveal">{work.label}</span>
+    <h2 class="section-title reveal reveal-delay-1">{work.title}</h2>
     <div class="work-grid">
-      <div class="work-card reveal reveal-delay-1">
-        <span class="work-card-tag">Featured</span>
-        <h3 class="work-card-title">NOVA<br>Platform</h3>
-        <p class="work-card-desc">A design system and product platform for a climate-tech startup, built for scale and speed.</p>
-        <div class="work-card-footer">
-          <span class="work-card-type">Web App</span>
-          <span class="work-arrow">↗</span>
-        </div>
-      </div>
-      <div class="work-card reveal reveal-delay-2">
-        <span class="work-card-tag">Featured</span>
-        <h3 class="work-card-title">ATELIER<br>Noir</h3>
-        <p class="work-card-desc">E-commerce experience for a luxury fashion brand. Brutalist meets refined elegance.</p>
-        <div class="work-card-footer">
-          <span class="work-card-type">E-Commerce</span>
-          <span class="work-arrow">↗</span>
-        </div>
-      </div>
-      <div class="work-card reveal reveal-delay-3">
-        <span class="work-card-tag">Featured</span>
-        <h3 class="work-card-title">RADIO<br>FREE</h3>
-        <p class="work-card-desc">A streaming platform for independent radio. Noise texture meets neon aesthetics.</p>
-        <div class="work-card-footer">
-          <span class="work-card-type">Web App</span>
-          <span class="work-arrow">↗</span>
-        </div>
-      </div>
+      {
+        work.projects.map((project, i) => (
+          <div class={`work-card reveal reveal-delay-${i + 1}`}>
+            <span class="work-card-tag">{project.tag}</span>
+            <h3 class="work-card-title">{project.title}</h3>
+            <p class="work-card-desc">{project.description}</p>
+            <div class="work-card-footer">
+              <span class="work-card-type">{project.type}</span>
+              <span class="work-arrow">↗</span>
+            </div>
+          </div>
+        ))
+      }
     </div>
     <div class="work-cta-wrap reveal">
-      <a href="#" class="work-cta">View All Projects →</a>
+      <a href="#" class="work-cta">{work.cta}</a>
     </div>
   </div>
 </section>

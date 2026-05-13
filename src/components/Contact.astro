@@ -1,3 +1,8 @@
+---
+import content from '../data/content.json';
+const { contact } = content;
+---
+
 <style>
   .contact {
     background: var(--color-bg-alt);
@@ -68,6 +73,7 @@
   .contact-link {
     font-family: var(--font-display);
     font-size: 0.875rem;
+    text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--color-text-muted);
     transition: color 0.3s ease;
@@ -79,19 +85,18 @@
 
 <section class="contact" id="contact">
   <div class="container">
-    <span class="section-label reveal">Let's Talk</span>
-    <h2 class="section-title reveal reveal-delay-1">Have a Project?</h2>
+    <span class="section-label reveal">{contact.label}</span>
+    <h2 class="section-title reveal reveal-delay-1">{contact.title}</h2>
     <a href="mailto:hello@studio.com" class="contact-cta reveal reveal-delay-2">
-      Start Something →
+      {contact.cta}
     </a>
-    <p class="contact-sub reveal reveal-delay-3">
-      We're always looking for ambitious projects with founders who care deeply about design.
-    </p>
+    <p class="contact-sub reveal reveal-delay-3">{contact.subtitle}</p>
     <div class="contact-links reveal reveal-delay-4">
-      <a href="mailto:hello@studio.com" class="contact-link">hello@studio.com</a>
-      <a href="#" class="contact-link">Twitter / X</a>
-      <a href="#" class="contact-link">Instagram</a>
-      <a href="#" class="contact-link">Dribbble</a>
+      {
+        contact.links.map((link) => (
+          <a href={link.url} class="contact-link">{link.label}</a>
+        ))
+      }
     </div>
   </div>
 </section>

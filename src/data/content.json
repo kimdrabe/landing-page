@@ -1,0 +1,138 @@
+{
+  "site": {
+    "title": "STUDIO — Webdesign Agentur",
+    "description": "Wir designen für die Mutigen."
+  },
+  "header": {
+    "logo": "STUDIO",
+    "links": [
+      { "label": "Arbeiten", "href": "#work" },
+      { "label": "Leistungen", "href": "#services" },
+      { "label": "Team", "href": "#team" }
+    ],
+    "cta": "Projekt starten"
+  },
+  "hero": {
+    "label": "Gegr. 2020",
+    "title": "Wir Designen",
+    "titleAccent": "für die Mutigen",
+    "subtitle": "Ein Brutalist-Webdesign-Studio, das digitale Erlebnisse schafft, die sich weigern, unterzugehen. Wir arbeiten mit Gründern und Marken, die etwas zu sagen haben.",
+    "cta": "Projekt starten",
+    "stats": [
+      { "number": "8+", "label": "Jahre Erfahrung" },
+      { "number": "120+", "label": "Projekte umgesetzt" },
+      { "number": "40+", "label": "Globale Kunden" },
+      { "number": "3x", "label": "Awwwards Nom." }
+    ]
+  },
+  "philosophy": {
+    "label": "Unser Manifest",
+    "title": "Gebaut aus\nÜberzeugung",
+    "body": "Wir lehnen Schablonen und sicheres Design ab. Jedes Projekt beginnt mit einem Standpunkt – einer mutigen kreativen Richtung, die zur Grundlage für alles Weitere wird. Unser Prozess ist rigoros, unsere Standards sind hoch, und wir nehmen nur Aufträge an, an die wir glauben.",
+    "items": [
+      "Design ist keine Dekoration – es ist Kommunikation.",
+      "Wenn es aussieht wie alle anderen, klingt es wie niemand.",
+      "Jedes Pixel muss sich seinen Platz verdienen.",
+      "Geschwindigkeit ist eine Funktion. Barrierefreiheit ist nicht verhandelbar."
+    ]
+  },
+  "work": {
+    "label": "Ausgewhlte Projekte",
+    "title": "Arbeit, die\nspricht",
+    "projects": [
+      {
+        "tag": "Featured",
+        "title": "NOVA\nPlatform",
+        "description": "Ein Designsystem und Produktplattform für ein Climate-Tech-Startup, gebaut für Skalierung und Geschwindigkeit.",
+        "type": "Web App"
+      },
+      {
+        "tag": "Featured",
+        "title": "ATELIER\nNoir",
+        "description": "E-Commerce-Erlebnis für eine Luxusmodemarke. Brutalist trifft auf raffinierte Eleganz.",
+        "type": "E-Commerce"
+      },
+      {
+        "tag": "Featured",
+        "title": "RADIO\nFREE",
+        "description": "Eine Streaming-Plattform für unabhängige Radiosender. Noise-Textur trifft auf Neon-Ästhetik.",
+        "type": "Web App"
+      }
+    ],
+    "cta": "Alle Projekte ansehen →"
+  },
+  "services": {
+    "label": "Was wir tun",
+    "title": "Leistungen",
+    "items": [
+      {
+        "number": "01",
+        "title": "Webdesign",
+        "description": "Maßgeschneiderte Websites und Landingpages, die sofort Eindruck hinterlassen. Keine Vorlagen, keine Kompromisse."
+      },
+      {
+        "number": "02",
+        "title": "Webentwicklung",
+        "description": "Schnell, barrierefrei, produktionsreif. Astro, React oder Vanilla – wir verwenden das richtige Werkzeug für den Job."
+      },
+      {
+        "number": "03",
+        "title": "Designsysteme",
+        "description": "Skalierbare, stimmige Designsysteme, die deine Marke über alle Berhrungspunkte hinweg konsistent halten."
+      }
+    ]
+  },
+  "team": {
+    "label": "Wer wir sind",
+    "title": "Das Team",
+    "members": [
+      {
+        "initials": "AK",
+        "name": "Alex Kraft",
+        "role": "Gründer & Kreativdirektor",
+        "socials": [
+          { "label": "Twitter", "url": "#" },
+          { "label": "Dribbble", "url": "#" }
+        ]
+      },
+      {
+        "initials": "SM",
+        "name": "Sasha Miles",
+        "role": "Leitende Entwicklerin",
+        "socials": [
+          { "label": "GitHub", "url": "#" },
+          { "label": "Twitter", "url": "#" }
+        ]
+      },
+      {
+        "initials": "LJ",
+        "name": "Luna Jimenez",
+        "role": "Designleiterin",
+        "socials": [
+          { "label": "Twitter", "url": "#" },
+          { "label": "Behance", "url": "#" }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "label": "Lass uns reden",
+    "title": "Hast du ein Projekt?",
+    "cta": "Start Something →",
+    "subtitle": "Wir suchen stets nach ambitionierten Projekten mit Gründern, denen Design wirklich am Herzen liegt.",
+    "links": [
+      { "label": "hello@studio.com", "url": "mailto:hello@studio.com" },
+      { "label": "Twitter / X", "url": "#" },
+      { "label": "Instagram", "url": "#" },
+      { "label": "Dribbble", "url": "#" }
+    ]
+  },
+  "footer": {
+    "logo": "STUDIO",
+    "copyright": "© 2026 — Alle Rechte vorbehalten",
+    "links": [
+      { "label": "Datenschutz", "url": "#" },
+      { "label": "Impressum", "url": "#" }
+    ]
+  }
+}

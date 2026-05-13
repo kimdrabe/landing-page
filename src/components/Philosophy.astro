@@ -1,3 +1,8 @@
+---
+import content from '../data/content.json';
+const { philosophy } = content;
+---
+
 <style>
   .philosophy {
     background: var(--color-bg-alt);
@@ -78,30 +83,20 @@
   <div class="container">
     <div class="philosophy-grid">
       <div class="philosophy-list">
-        <div class="philosophy-item">
-          <span class="philosophy-num">01</span>
-          <span class="philosophy-text">Design is not decoration — it is communication.</span>
-        </div>
-        <div class="philosophy-item">
-          <span class="philosophy-num">02</span>
-          <span class="philosophy-text">If it looks like everyone else, it sounds like no one.</span>
-        </div>
-        <div class="philosophy-item">
-          <span class="philosophy-num">03</span>
-          <span class="philosophy-text">Every pixel must earn its place.</span>
-        </div>
-        <div class="philosophy-item">
-          <span class="philosophy-num">04</span>
-          <span class="philosophy-text">Speed is a feature. Accessibility is non-negotiable.</span>
-        </div>
+        {
+          philosophy.items.map((item, i) => (
+            <div class="philosophy-item">
+              <span class="philosophy-num">{(i + 1).toString().padStart(2, '0')}</span>
+              <span class="philosophy-text">{item}</span>
+            </div>
+          ))
+        }
       </div>
       <div class="philosophy-body">
-        <span class="section-label">Our Manifesto</span>
-        <h2 class="section-title">Built on<br>Conviction</h2>
+        <span class="section-label">{philosophy.label}</span>
+        <h2 class="section-title">{philosophy.title}</h2>
         <div class="accent-border"></div>
-        <p>
-          We reject cookie-cutter templates and safe design. Every project starts with a point of view — a bold creative direction that becomes the foundation for everything else. Our process is rigorous, our standards are high, and we only take work we believe in.
-        </p>
+        <p>{philosophy.body}</p>
       </div>
     </div>
   </div>

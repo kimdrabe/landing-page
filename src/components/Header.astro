@@ -1,3 +1,8 @@
+---
+import content from '../data/content.json';
+const { header } = content;
+---
+
 <style>
   .header {
     position: fixed;
@@ -51,11 +56,13 @@
 </style>
 
 <header class="header">
-  <a href="#" class="logo">STUDIO</a>
+  <a href="#" class="logo">{header.logo}</a>
   <nav class="nav">
-    <a href="#work" class="nav-links">Work</a>
-    <a href="#services" class="nav-links">Services</a>
-    <a href="#team" class="nav-links">Team</a>
-    <a href="#contact" class="nav-cta">Start a Project</a>
+    {
+      header.links.map((link) => (
+        <a href={link.href} class="nav-links">{link.label}</a>
+      ))
+    }
+    <a href="#contact" class="nav-cta">{header.cta}</a>
   </nav>
 </header>
