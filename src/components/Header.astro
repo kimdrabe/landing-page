@@ -15,7 +15,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     display: flex;
     justify-content: space-between;
     align-items: center;
-    mix-blend-mode: difference;
+    background: rgba(0, 51, 102, 0.9);
+    backdrop-filter: blur(8px);
   }
   .logo-text {
     font-family: var(--font-display);
@@ -47,13 +48,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     opacity: 0.6;
   }
   .nav-cta {
-    border: 1px solid var(--color-text);
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent) !important;
     padding: 0.5rem 1.25rem;
     transition: all 0.3s ease;
   }
   .nav-cta:hover {
-    background: var(--color-text);
-    color: var(--color-bg) !important;
+    background: var(--color-accent);
+    color: #ffffff !important;
     opacity: 1 !important;
   }
   @media (max-width: 768px) {
