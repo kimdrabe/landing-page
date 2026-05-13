@@ -24,8 +24,11 @@ content:
         label: Header
         type: object
         fields:
+          - name: logoImage
+            label: Logo-Bild
+            type: image
           - name: logo
-            label: Logo-Text
+            label: Logo-Text (Fallback)
             type: string
           - name: links
             label: Navigation
@@ -215,8 +218,11 @@ content:
         label: Footer
         type: object
         fields:
+          - name: logoImage
+            label: Logo-Bild
+            type: image
           - name: logo
-            label: Logo-Text
+            label: Logo-Text (Fallback)
             type: string
           - name: copyright
             label: Copyright-Text
