@@ -1,14 +1,23 @@
 {
   "site": {
     "title": "STUDIO — Webdesign Agentur",
-    "description": "Wir designen für die Mutigen."
+    "description": "Wir designen für die Pleps."
   },
   "header": {
     "logo": "STUDIO",
     "links": [
-      { "label": "Arbeiten", "href": "#work" },
-      { "label": "Leistungen", "href": "#services" },
-      { "label": "Team", "href": "#team" }
+      {
+        "label": "Arbeiten",
+        "href": "#work"
+      },
+      {
+        "label": "Leistungen",
+        "href": "#services"
+      },
+      {
+        "label": "Team",
+        "href": "#team"
+      }
     ],
     "cta": "Projekt starten"
   },
@@ -19,10 +28,22 @@
     "subtitle": "Ein Brutalist-Webdesign-Studio, das digitale Erlebnisse schafft, die sich weigern, unterzugehen. Wir arbeiten mit Gründern und Marken, die etwas zu sagen haben.",
     "cta": "Projekt starten",
     "stats": [
-      { "number": "8+", "label": "Jahre Erfahrung" },
-      { "number": "120+", "label": "Projekte umgesetzt" },
-      { "number": "40+", "label": "Globale Kunden" },
-      { "number": "3x", "label": "Awwwards Nom." }
+      {
+        "number": "8+",
+        "label": "Jahre Erfahrung"
+      },
+      {
+        "number": "120+",
+        "label": "Projekte umgesetzt"
+      },
+      {
+        "number": "40+",
+        "label": "Globale Kunden"
+      },
+      {
+        "number": "3x",
+        "label": "Awwwards Nom."
+      }
     ]
   },
   "philosophy": {
@@ -91,8 +112,14 @@
         "name": "Alex Kraft",
         "role": "Gründer & Kreativdirektor",
         "socials": [
-          { "label": "Twitter", "url": "#" },
-          { "label": "Dribbble", "url": "#" }
+          {
+            "label": "Twitter",
+            "url": "#"
+          },
+          {
+            "label": "Dribbble",
+            "url": "#"
+          }
         ]
       },
       {
@@ -100,8 +127,14 @@
         "name": "Sasha Miles",
         "role": "Leitende Entwicklerin",
         "socials": [
-          { "label": "GitHub", "url": "#" },
-          { "label": "Twitter", "url": "#" }
+          {
+            "label": "GitHub",
+            "url": "#"
+          },
+          {
+            "label": "Twitter",
+            "url": "#"
+          }
         ]
       },
       {
@@ -109,8 +142,14 @@
         "name": "Luna Jimenez",
         "role": "Designleiterin",
         "socials": [
-          { "label": "Twitter", "url": "#" },
-          { "label": "Behance", "url": "#" }
+          {
+            "label": "Twitter",
+            "url": "#"
+          },
+          {
+            "label": "Behance",
+            "url": "#"
+          }
         ]
       }
     ]
@@ -121,18 +160,36 @@
     "cta": "Start Something →",
     "subtitle": "Wir suchen stets nach ambitionierten Projekten mit Gründern, denen Design wirklich am Herzen liegt.",
     "links": [
-      { "label": "hello@studio.com", "url": "mailto:hello@studio.com" },
-      { "label": "Twitter / X", "url": "#" },
-      { "label": "Instagram", "url": "#" },
-      { "label": "Dribbble", "url": "#" }
+      {
+        "label": "hello@studio.com",
+        "url": "mailto:hello@studio.com"
+      },
+      {
+        "label": "Twitter / X",
+        "url": "#"
+      },
+      {
+        "label": "Instagram",
+        "url": "#"
+      },
+      {
+        "label": "Dribbble",
+        "url": "#"
+      }
     ]
   },
   "footer": {
     "logo": "STUDIO",
     "copyright": "© 2026 — Alle Rechte vorbehalten",
     "links": [
-      { "label": "Datenschutz", "url": "#" },
-      { "label": "Impressum", "url": "#" }
+      {
+        "label": "Datenschutz",
+        "url": "#"
+      },
+      {
+        "label": "Impressum",
+        "url": "#"
+      }
     ]
   }
 }
