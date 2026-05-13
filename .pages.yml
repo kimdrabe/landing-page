@@ -1,0 +1,234 @@
+media:
+  input: public/media
+  output: /media
+
+content:
+  - name: site
+    label: Website-Inhalte
+    type: file
+    path: src/data/content.json
+    format: json
+    fields:
+      - name: site
+        label: Seiteneinstellungen
+        type: object
+        fields:
+          - name: title
+            label: Seitentitel
+            type: string
+          - name: description
+            label: Meta-Beschreibung
+            type: text
+
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: logo
+            label: Logo-Text
+            type: string
+          - name: links
+            label: Navigation
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: Bezeichnung
+                type: string
+              - name: href
+                label: Link
+                type: string
+          - name: cta
+            label: Button-Text
+            type: string
+
+      - name: hero
+        label: Hero-Bereich
+        type: object
+        fields:
+          - name: label
+            label: Label
+            type: string
+          - name: title
+            label: Überschrift (erste Zeile)
+            type: string
+          - name: titleAccent
+            label: Überschrift (Akzent-Zeile)
+            type: string
+          - name: subtitle
+            label: Untertitel
+            type: text
+          - name: cta
+            label: Button-Text
+            type: string
+          - name: stats
+            label: Statistiken
+            type: object
+            list: true
+            fields:
+              - name: number
+                label: Zahl
+                type: string
+              - name: label
+                label: Beschriftung
+                type: string
+
+      - name: philosophy
+        label: Philosophie / Manifest
+        type: object
+        fields:
+          - name: label
+            label: Section-Label
+            type: string
+          - name: title
+            label: Überschrift
+            type: string
+          - name: body
+            label: Text
+            type: text
+          - name: items
+            label: Manifest-Punkte
+            type: string
+            list: true
+
+      - name: work
+        label: Projekte
+        type: object
+        fields:
+          - name: label
+            label: Section-Label
+            type: string
+          - name: title
+            label: Überschrift
+            type: string
+          - name: projects
+            label: Projekte
+            type: object
+            list: true
+            fields:
+              - name: tag
+                label: Tag
+                type: string
+              - name: title
+                label: Projektname
+                type: string
+              - name: description
+                label: Beschreibung
+                type: text
+              - name: type
+                label: Typ
+                type: string
+          - name: cta
+            label: Button-Text
+            type: string
+
+      - name: services
+        label: Leistungen
+        type: object
+        fields:
+          - name: label
+            label: Section-Label
+            type: string
+          - name: title
+            label: Überschrift
+            type: string
+          - name: items
+            label: Leistungen
+            type: object
+            list: true
+            fields:
+              - name: number
+                label: Nummer
+                type: string
+              - name: title
+                label: Leistungstitel
+                type: string
+              - name: description
+                label: Beschreibung
+                type: text
+
+      - name: team
+        label: Team
+        type: object
+        fields:
+          - name: label
+            label: Section-Label
+            type: string
+          - name: title
+            label: Überschrift
+            type: string
+          - name: members
+            label: Mitglieder
+            type: object
+            list: true
+            fields:
+              - name: initials
+                label: Initialen
+                type: string
+              - name: name
+                label: Name
+                type: string
+              - name: role
+                label: Rolle
+                type: string
+              - name: socials
+                label: Social Links
+                type: object
+                list: true
+                fields:
+                  - name: label
+                    label: Text
+                    type: string
+                  - name: url
+                    label: URL
+                    type: string
+
+      - name: contact
+        label: Kontakt
+        type: object
+        fields:
+          - name: label
+            label: Section-Label
+            type: string
+          - name: title
+            label: Überschrift
+            type: string
+          - name: cta
+            label: Button-Text
+            type: string
+          - name: subtitle
+            label: Untertitel
+            type: text
+          - name: links
+            label: Kontakt-Links
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: Text
+                type: string
+              - name: url
+                label: URL
+                type: string
+
+      - name: footer
+        label: Footer
+        type: object
+        fields:
+          - name: logo
+            label: Logo-Text
+            type: string
+          - name: copyright
+            label: Copyright-Text
+            type: string
+          - name: links
+            label: Footer-Links
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: Text
+                type: string
+              - name: url
+                label: URL
+                type: string
