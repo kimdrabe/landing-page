@@ -7,12 +7,12 @@
     "logo": "STUDIO",
     "links": [
       {
-        "label": "Arbeiten",
-        "href": "#work"
-      },
-      {
         "label": "Leistungen",
         "href": "#services"
+      },
+      {
+        "label": "Arbeiten",
+        "href": "#work"
       },
       {
         "label": "Team",
